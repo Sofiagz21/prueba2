@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <title> Menú </title>
+</head>
+<body>
+    <!--MENU LATERAL-->
+    <div class="menulateral">
+        <!--SE CREA UN FORMULARIO PARA AGREGAR LOS BOTONES EN EL MENÚ LATERAL-->
+        <form action="" id="containerBotones" autocomplete="off">
+            <button class="boton" type="button" onclick="palabras()">Ejercicios Palabras</button>
+            <button class="boton"type="button" onclick=" calculadora()">Calculadora</button>
+            <button class="boton"type="button" onclick="imagenCont()"> Imagen </button>
+            <button class="boton" onclick="limpiar()">Regresar al Inicio</button>
+        </form>
+    </div>
+     <!--CONTENEDOR EJERCICIOS-->
+    <div class="contenedorEjercicios">
+        <!--CONTENEDOR PRINCIPAL-->
+        <!--SE CREA UN DIV QUE TENGA UN MENSAJE (BIENVENIDOS)-->
+        <div class="vacio">
+            Bienvenidos
+        </div>
+        <!--EJERCICIO DE PALABRAS-->
+        <div class="ejercicioPalabras">
+            <div class="fil">
+                <div class="tablapalabras">
+                   <p><input class="inpupa"type="text" id="palabras" autocomplete="off">
+                    </p>
+                  <button class="palabra" onclick="longitud()"> Longitud </button>
+                </div>
+                <!--PARA MOSTRAR EN PANTALLA EL RESULTADO DE LA PALABRA CON SU LONGITUD-->
+                <p class="resultadopalabra"><span id="el_resultadopalabra1"></span></p>
+        </div>
+            <div class="fil">
+                <div class="tablapalabras">
+                  <p> <input class="inpupa" type="text" id="mayus">
+                    </p>
+                    <button class="palabra" onclick="mayusculas()">Pasar a mayúsculas</button>
+                </div>
+                <!--PARA MOSTRAR EN PANTALLA EL RESULTADO DE LA PALABRA EN MAYUSCULAS-->
+                <p class="resultadopalabra"><span id="el_resultadopalabra2"></span></p>
+            </div>
+            <div class="fil">
+                <div class="tablapalabras">
+                  <p> <input class="inpupa" type="text" id="minus"></p>
+                  <button class="palabra" onclick="minuscula()">Pasar a minúscula</button>  
+                </div>
+                <!--PARA MOSTRAR EN PANTALLA EL RESULTADO DE LA PALABRA EN MINUSCULAS-->
+                <p class="resultadopalabra"><span id="el_resultadopalabra3"></span></p>
+            </div>
+        </div>
+
+        <!--EJERCICIO DE CALCULADORA-->
+        <div class="calculadora">
+            <div class="contenido">
+                <form action=""  id="miformulario">
+                    <!--LABELS PARA ESCRIBIR EL NÚMERO QUE DESEE INGRESAR-->
+                    <div class="label">
+                        <label for="numero1">Número 1 :</label>
+                        <input class="innum"type="number" name=" " id="numero1" placeholder="Escribe un número">
+                        <label for="numero2">Número 2 :</label>
+                        <input class="innum" type="number" name=" " id="numero2" placeholder="Escribe un número">
+                    </div>
+                    <!--BOTONES PARA QUE EL USUARIO ESCOJA QUE FUNCIÓN QUIERE REALIZAR-->
+                    <div class="botones">
+                        <button class="limp" type="button" onclick="sumar()" >Suma</button>
+                        <button class="limp" type="button" onclick="restar()" >Resta</button>
+                        <button class="limp" type="button" onclick="multiplicar()" >Multiplicación</button>
+                        <button class="limp" type="button" onclick="dividir()" >División</button>
+                    </div>
+                    <!--PARA MOSTRAR EN PANTALLA EL RESULTADO DE LA OPERACIÓN ESCOGIDA-->
+                     <p class="resultado">Resultado <span id="el_resultado"></span></p>
+                </form>
+            </div>
+        </div>
+
+           <!--EJERCICIO DE IMAGEN-->
+        <div class="imagenContenido">
+            <img src="images/nbhd.jpg">
+        </div>           
+    </div>
+    
+    <script src="js/index.js"></script><!--SE AÑADA SCRIPT INDEX DE LA PARTE PRINCIPAL A HTML-->
+    <script src="js/practicas.js"></script><!--SE AÑADA SCRIPT PALABRAS A HTML-->
+    <script src="js/calculadora.js"></script><!--SE AÑADA SCRIPT CALCUALDORA A HTML-->
+</body>
+</html>

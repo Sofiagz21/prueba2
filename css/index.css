@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:900i&display=swap');
+
+body, html{
+    display:flex;
+    width: 100%;
+    margin:0;
+    padding:0;
+    background: url(../images/background.jpg);
+}
+
+/*ESTILOS DEL MENÚ LATERAL*/
+
+.menulateral{
+    display: flex;
+    width:19%;
+    height: 100vh;
+    position: fixed;
+    align-items: center;
+    /* PARA EL GLASSMORPHIS CCS*/
+    background: rgba(255,255,255,0.4);
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    margin: 6px;  
+}
+
+/* ESTILOS DEL CONTENEDOR */
+
+.contenedorEjercicios{
+    display: flex;
+    width: 76.5%;
+    height: 98vh;
+    position: relative;
+    left: 20.2%;
+    margin: 6px;
+    flex-direction:column; 
+    /* PARA EL GLASSMORPHIS CCS*/
+    background: rgba(255,255,255,0.4);
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    margin: 6px;
+    padding: 10px;
+}
+
+/* ESTILOS DE LA UBICACIÓN DE LOS BOTONES*/
+
+#containerBotones{
+    display: flex;
+    height: max-content;
+    flex-direction: column;
+    align-items: center;
+    width:100%
+    
+}
+ /* ESTILOS DE LOS BOTONES */
+
+.boton{
+    margin-top: 50px;
+    width: 200px;
+    height: 80px;
+      /* PARA EL GLASSMORPHIS CCS*/
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 25px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    /*ESTILOS DEL TEXTO DE LOS BOTONES*/
+    font-family: 'Encode Sans', sans-serif;
+    font-size: 20px;
+}
+
+.boton:hover { background: rgba( 13, 13, 13, 0.25 )}
+
+
+/*Contenedor de la imagen*/
+
+.ejercicioPalabras,.calculadora,.imagenContenido {
+    display: none;
+    width: 100%;
+    min-height: 98vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    font-family: 'Encode Sans', sans-serif;
+}
+
+/*CONTENEDOR PRINCIPAL ESTILOS*/
+
+.vacio{
+    display: flex;
+    width: 99%;
+    font-size: 150px;
+    justify-content: center;
+    padding-top: 200px;
+
+    /* estilos de las letras*/
+    font-family: 'Montserrat', sans-serif;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+     font-size:120px;
+    letter-spacing:0.1em;
+     -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: white;
+    text-shadow: 8px 8px #D463D5,20px 20px #000000;
+
+}
+
+/* CONTENEDOR PALABRAS*/
+
+.ejercicioPalabras{
+ flex-direction: column;
+}
+
+
+.palabra{
+    width: 290px;
+    height: 50px;
+    text-align: center;
+    margin-left: 30px;
+      /* PARA EL GLASSMORPHIS CCS*/
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 25px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    /*ESTILOS DEL TEXTO DE LOS BOTONES*/
+    font-family: 'Encode Sans', sans-serif;
+    font-size: 20px;
+    
+}
+
+.palabra:hover { background: rgba( 13, 13, 13, 0.25 )}
+
+.tablapalabras{
+    background: #D6DBFA;
+    border-radius: 10px;
+    width: 30%;
+    margin: 10px 20px 60px 20px;
+    padding: 30px; 
+}
+
+.inpupa[type=text] {
+  background-color: #D6DBFA;
+  border: 1px color rgba( 255, 255, 255, 0.18 ) ;
+  border-radius: 5px;
+  color: black;
+  padding:10px;
+  width: 310px;
+}
+
+.fil{
+    display: flex;
+}
+
+.resultadopalabra {
+    padding-top: 65px;
+    width: 60%;
+    height: 50%;
+    margin-top: 10px;
+    margin-right: 15px;
+    color: black;
+    font-size: 25px;
+    text-align: center;
+    background: (rgba( 255, 255, 255, 0.25 ));
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 25px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+/*CONTENEDOR CALCULADORA ESTILOS*/
+
+.calculadora{
+margin: 25px;
+}
+
+
+.label{
+    display: flex;
+    justify-content: space-between;
+    font-size: 35px;
+    padding-top: 50px;
+
+}
+
+label{
+     margin-right: 60px;
+     margin-left: 70px;
+}
+
+.innum[type=number] {
+  border-radius: 10px;
+   font-size: 25px;
+   width: 228px;
+}
+/* ESTILOS DE LOS BOTONES DE LA CALCULADORA*/
+.limp {
+    width: 180px;
+    height: 50px;
+    text-align: center;
+    margin-top: 90px;
+    margin-left: 30px;
+      /* PARA EL GLASSMORPHIS CCS*/
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 25px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    /*ESTILOS DEL TEXTO DE LOS BOTONES*/
+    font-family: 'Encode Sans', sans-serif;
+    font-size: 20px;
+
+}
+.limp:hover { background: rgba( 13, 13, 13, 0.25 )}
+
+/* ESTILOS DEL RESULTADO DE LA CALCULADORA*/
+
+.resultado{
+    margin-top: 80px;
+    padding: 50px;
+    background: #fff;
+    border-radius: 10px;
+    color: #D463D5;
+    font-size: 30px;
+}
+
+/* CONTENDEDOR IMAGEN CONTENIDO*/
+
+.imagenContenido img{
+   width: 100%; 
+   border-radius: 10px;
+}
